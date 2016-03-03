@@ -1,12 +1,11 @@
 {
   "db": {
-    "name": "db",
-    "database": "palaverplace",
     "host": "127.0.0.1",
     "port": 27017,
+    "database": "palaverplace",
+    "name": "db",
     "user": "palaverplace_user",
     "pass": "password",
-    "connector": "loopback-connector-mongodb"
-
+    "connector": "mongodb"
   }
 }

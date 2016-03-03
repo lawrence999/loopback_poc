@@ -35,5 +35,9 @@
   "offer": {
     "dataSource": "db",
     "public": true
+  },
+  "placeProfile": {
+    "dataSource": "db",
+    "public": true
   }
 }
