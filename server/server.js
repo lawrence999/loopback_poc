@@ -2,6 +2,19 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
+var mongoose = require('mongoose');
+
+
+var config = require('./datasources.json');
+
+app.set('config', config);
+
+// Database connection
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
+mongoose.connect(config.db.host, config.db.name, config.db.port, {
+    user: config.db.user,
+    pass: config.db.pass
+});
 
 app.start = function() {
   // start the web server
